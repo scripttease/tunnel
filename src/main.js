@@ -1,8 +1,16 @@
 import "./style.css";
 import { context }       from "./canvas";
 import { centredCircle } from "./shape";
+import { perlin }      from "../vendor/noise";
+window.perlin = perlin;
 
-centredCircle(context, window, 200);
+context.strokeStyle = "hotpink";
+context.lineWidth = 2;
 
-context.fillStyle = "hotpink";
-context.fill();
+for (let i = 0; i < 10; i++) {
+  const radius = 25 + i * 30;
+  context.beginPath();
+  centredCircle(context, window, radius);
+  context.stroke();
+}
+
