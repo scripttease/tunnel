@@ -36,6 +36,6 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HTMLPlugin({ title: "Stepper" }),
+    new HTMLPlugin({ title: "Tunnel" }),
   ]
 };
